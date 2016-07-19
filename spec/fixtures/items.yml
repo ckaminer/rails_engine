@@ -4,6 +4,12 @@ one:
   unit_price: 5
   merchant: one
 
+same_price:
+  name: Nerds
+  description: Balls of sugar
+  unit_price: 5
+  merchant: one
+
 two:
   name: Skittles
   description: Fruity explosions everywhere
