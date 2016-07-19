@@ -30,6 +30,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'pry'
+  gem 'simplecov'
 end
 
 group :development do

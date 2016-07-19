@@ -1,0 +1,9 @@
+one:
+  status: shipped
+  customer: one
+  merchant: two
+
+two:
+  status: pending
+  customer: two
+  merchant: one
