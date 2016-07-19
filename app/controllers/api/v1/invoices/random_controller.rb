@@ -5,5 +5,4 @@ class Api::V1::Invoices::RandomController < ApiBaseController
     rand_id = rand(Invoice.count)
     respond_with Invoice.find(rand_id)
   end
-
 end
