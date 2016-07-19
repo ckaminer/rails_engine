@@ -3,6 +3,11 @@ one:
   customer: one
   merchant: two
 
+second_shipped:
+  status: shipped
+  customer: one
+  merchant: one
+
 two:
   status: pending
   customer: two
