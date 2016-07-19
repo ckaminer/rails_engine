@@ -20,8 +20,8 @@ RSpec.describe Api::V1::MerchantsController do
 
       expect(response.status).to eq 200
 
-      parsed_item = JSON.parse(response.body)
-      expect(parsed_item["name"]).to eq merchant.name
+      parsed_merchant = JSON.parse(response.body)
+      expect(parsed_merchant["name"]).to eq merchant.name
     end
   end
 end
