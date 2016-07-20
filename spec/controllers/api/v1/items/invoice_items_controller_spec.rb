@@ -1,12 +1,12 @@
 require "rails_helper"
 
-RSpec.describe Api::V1::Invoices::InvoiceItemsController do
-  fixtures :invoices
+RSpec.describe Api::V1::Items::InvoiceItemsController do
+  fixtures :items
   fixtures :invoice_items
   describe "GET index" do
-    it "can get all invoice items for a given invoice" do
-      invoice = invoices(:one)
-      get :index, id: invoice.id
+    it "can get all invoice items for a given item" do
+      item = items(:one)
+      get :index, id: item.id
 
       expect(response.status).to eq 200
 
