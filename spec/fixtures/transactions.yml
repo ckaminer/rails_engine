@@ -10,5 +10,5 @@ same_invoice:
 
 two:
   credit_card_number: 4242424242424241
-  result: success
+  result: pending
   invoice: two

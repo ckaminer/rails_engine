@@ -1,9 +1,8 @@
-class Api::V1::Cusotmers::RandomController < ApiBaseController
-  respond_to :json, :xml
+class Api::V1::Customers::RandomController < ApiBaseController
 
   def show
-    rand_id = rand(Customer.count)
-    respond_with Customer.find(rand_id)
+    rand_id = Customer.random_id
+    render json: Customer.find(rand_id)
   end
 
 end
