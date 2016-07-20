@@ -1,7 +1,6 @@
 class Api::V1::Invoices::MerchantsController < ApiBaseController
-  respond_to :json, :xml
 
-  def index
-    respond_with  Invoice.find(params[:id]).merchant
+  def show
+    render json:  Invoice.find(params[:id]).merchant
   end
 end
