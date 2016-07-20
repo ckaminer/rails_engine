@@ -5,7 +5,7 @@ one:
 
 same_invoice:
   credit_card_number: 1234567812345678
-  result: pending
+  result: success
   invoice: one
 
 two:
