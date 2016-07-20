@@ -4,4 +4,8 @@ class Customer < ApplicationRecord
   def transactions
     Transaction.joins(invoice: :customer).where(customers: {id: self.id})
   end
+
+  def self.random_id
+    pluck(:id).shuffle.pop
+  end
 end
