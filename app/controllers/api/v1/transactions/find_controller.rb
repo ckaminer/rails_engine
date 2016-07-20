@@ -1,12 +1,11 @@
 class Api::V1::Transactions::FindController < ApiBaseController
-  respond_to :json, :xml
 
   def index
-    respond_with Transaction.where(item_params)
+    render json: Transaction.where(item_params)
   end
 
   def show
-    respond_with Transaction.find_by(item_params)
+    render json: Transaction.find_by(item_params)
   end
 
   private
