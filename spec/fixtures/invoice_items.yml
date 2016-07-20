@@ -15,3 +15,9 @@ two:
   unit_price: 6
   invoice: two
   item: one
+
+three:
+  quantity: 8
+  unit_price: 4
+  invoice: four
+  item: one

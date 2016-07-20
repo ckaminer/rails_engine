@@ -12,7 +12,7 @@ RSpec.describe Api::V1::Customers::InvoicesController do
 
       parsed_invoices = JSON.parse(response.body)
 
-      expect(parsed_invoices.count).to eq 3
+      expect(parsed_invoices.count).to eq 4
     end
   end
 end
