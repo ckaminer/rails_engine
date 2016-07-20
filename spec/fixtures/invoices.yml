@@ -12,3 +12,8 @@ two:
   status: pending
   customer: two
   merchant: one
+
+three:
+  status: pending
+  customer: one
+  merchant: one
