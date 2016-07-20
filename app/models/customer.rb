@@ -1,11 +1,10 @@
 class Customer < ApplicationRecord
   has_many :invoices
-
-  def transactions
-    Transaction.joins(invoice: :customer).where(customers: {id: self.id})
-  end
+  has_many :transactions, through: :invoices
+  has_many :merchants, through: :invoices
 
   def self.random_id
     pluck(:id).shuffle.pop
   end
+
 end

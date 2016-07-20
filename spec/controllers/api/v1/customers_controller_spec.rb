@@ -9,7 +9,8 @@ RSpec.describe Api::V1::CustomersController do
       expect(response.status).to eq 200
 
       customers = JSON.parse(response.body)
-      expect(customers.count).to eq 2
+
+      expect(customers.count).to eq 3
     end
   end
 
@@ -21,8 +22,8 @@ RSpec.describe Api::V1::CustomersController do
       expect(response.status).to eq 200
 
       parsed_customer = JSON.parse(response.body)
-      expect(parsed_customer["first_name"]).to eq merchant.first_name
-      expect(parsed_customer["last_name"]).to eq merchant.last_name
+      expect(parsed_customer["first_name"]).to eq customer.first_name
+      expect(parsed_customer["last_name"]).to eq customer.last_name
     end
   end
 end
