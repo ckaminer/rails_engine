@@ -16,6 +16,15 @@ then run
 ```
 rails db:drop db:create db:migrate
 ```
+if you get this error:
+```
+ActiveRecord::NoEnvironmentInSchemaError:
+Environment data not found in the schema.
+```
+To resolve this issue, run:
+```
+    bin/rails db:environment:set RAILS_ENV=development
+```
 then run
 ```
 rake csv:import_all
