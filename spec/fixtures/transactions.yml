@@ -12,3 +12,8 @@ two:
   credit_card_number: 4242424242424241
   result: pending
   invoice: two
+
+three:
+  credit_card_number: 4242424242424241
+  result: success
+  invoice: four
