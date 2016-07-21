@@ -6,4 +6,11 @@ class Item < ApplicationRecord
   def self.random_id
     pluck(:id).shuffle.pop
   end
+
+  def best_day
+    invoices.joins(:invoice_items)
+            .group("invoices.created_at")
+            .sum("invoice_items.unit_price * invoice_items.quantity")
+            .first.first
+  end
 end

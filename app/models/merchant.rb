@@ -10,9 +10,8 @@ class Merchant < ApplicationRecord
   end
 
   def customers_with_pending_invoices
-    Customer.joins(:invoices)
-            .joins(:merchants)
-            .where(merchants: {id: self.id}, invoices: {status: "pending"})
+    Customer.joins(merchants: :invoices)
+            .where(merchants: {id: self.id}).merge(Invoice.pending)
             .distinct
   end
 
