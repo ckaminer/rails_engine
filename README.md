@@ -26,6 +26,8 @@ This repo uses the RSpec testing suite.  To run the test suite run:
 ```
 rspec
 ```
+
+## Spec Harness
 To run the spec harness, first clone down the repo (make sure you are in the same directory that your project lives in). You may need to  `cd`  up to the directory.
 
 ```
