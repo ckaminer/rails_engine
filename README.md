@@ -10,7 +10,7 @@ then run
 ```
 cd rails_engine
 ```
-Run `bundle` and then run the following commands from your command line to set up and seed your data.
+Run `bundle update` and then run the following commands from your command line to set up and seed your data.
 
 then run
 ```
@@ -37,6 +37,11 @@ rspec
 ```
 
 ## Spec Harness
+```
+rails s
+```
+Open a new terminal window.
+
 To run the spec harness, first clone down the repo (make sure you are in the same directory that your project lives in). You may need to  `cd`  up to the directory.
 
 ```
