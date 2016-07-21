@@ -8,9 +8,9 @@ class Item < ApplicationRecord
   end
 
   def best_day
-    invoices.joins(:invoice_items)
-            .group("invoices.created_at")
-            .sum("invoice_items.unit_price * invoice_items.quantity")
-            .first.first
+    invoice_items.joins(:invoice)
+                 .group("invoices.created_at")
+                 .order("sum_invoice_items_quantity DESC, invoices_created_at DESC")
+                 .sum("invoice_items.quantity").first.first
   end
 end

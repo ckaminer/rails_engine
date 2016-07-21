@@ -2,10 +2,10 @@ class Api::V1::Merchants::RevenueController < ApiBaseController
 
   def index
     merchant = Merchant.find(params[:id])
-    if merchant_params.keys == [:id, :date]
-      render json: merchant.revenue_by_date(merchant_params[:date])
+    if merchant_params[:date]
+      render json: merchant.revenue_by_date(merchant_params[:date]), serializer: RevenueSerializer
     else
-      render json: merchant.revenue_of_merchant
+      render json: merchant.revenue_of_merchant, serializer: RevenueSerializer
     end
   end
 
