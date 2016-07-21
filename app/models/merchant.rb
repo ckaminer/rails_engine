@@ -33,6 +33,14 @@ class Merchant < ApplicationRecord
             .sum("invoice_items.unit_price * invoice_items.quantity")
   end
 
+  def self.most_items_sold(quantity)
+    joins(invoices: [:transactions, :invoice_items])
+            .where(transactions: { result: "success" })
+            .group(:id)
+            .order("SUM(invoice_items.quantity) DESC")
+            .limit(quantity)
+  end
+
   def self.total_revenue_by_date(date)
     Invoice.where(created_at: date).joins(:invoice_items)
            .sum("invoice_items.unit_price * invoice_items.quantity")
@@ -43,9 +51,6 @@ class Merchant < ApplicationRecord
            .group(:id)
            .order("SUM(invoice_items.unit_price * invoice_items.quantity) DESC")
            .limit(quantity)
-
-    # joins(:invoice_items)
-    # .select("SUM invoice_items.unit_price * invoice_items.quantity AS total_revenue")
-    # .group(:id)
   end
+
 end
