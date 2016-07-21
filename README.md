@@ -37,6 +37,7 @@ rspec
 ```
 
 ## Spec Harness
+To start the a server:
 ```
 rails s
 ```
