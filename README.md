@@ -10,7 +10,7 @@ then run
 ```
 cd rails_engine
 ```
-Run `bundle update` and then run the following commands from your command line to set up and seed your data.
+Run `bundle` and then run the following commands from your command line to set up and seed your data.
 
 then run
 ```
@@ -52,6 +52,8 @@ then
 ```
 cd rales_engine_spec_harness
 ```
+Run `bundle update`
+`
 finally, run `rake`
 
 ## Briefing
