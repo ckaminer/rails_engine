@@ -14,16 +14,12 @@ RSpec.describe Api::V1::Merchants::CustomersController do
 
       parsed_customers = JSON.parse(response.body)
 
-      expect(parsed_customers.count).to eq 2
-      expect(parsed_customers.pluck("first_name")).to include("John", "Cersei")
+      expect(parsed_customers.count).to eq 1
+      expect(parsed_customers.pluck("first_name")).to include("Cersei")
     end
   end
 
   describe "GET show" do
-    fixtures :merchants
-    fixtures :customers
-    fixtures :transactions
-    fixtures :invoices
     it "can return the customer who has conducted the most successful transactions" do
       merchant = merchants(:one)
       get :show, id: merchant.id
