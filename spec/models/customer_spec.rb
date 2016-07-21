@@ -8,4 +8,9 @@ RSpec.describe Customer, type: :model do
       expect(customer.transactions.count).to eq 3
     end
   end
+
+     it { should have_many(:invoices) }
+     it { should have_many(:transactions) }
+     it { should have_many(:merchants) }
+
 end
