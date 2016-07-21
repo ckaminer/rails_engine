@@ -53,7 +53,7 @@ then
 cd rales_engine_spec_harness
 ```
 Run `bundle update`
-`
+
 finally, run `rake`
 
 ## Briefing
