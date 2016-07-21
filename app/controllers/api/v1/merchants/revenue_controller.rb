@@ -9,6 +9,14 @@ class Api::V1::Merchants::RevenueController < ApiBaseController
     end
   end
 
+  def total_date
+    render json: Merchant.total_revenue_by_date(params[:date]), serializer: TotalRevenueSerializer
+  end
+
+  def most_revenue
+    render json: Merchant.ranked_by_revenue(params[:quantity])
+  end
+
   private
     def merchant_params
       params.permit(:id, :date)
