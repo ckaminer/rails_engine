@@ -5,7 +5,7 @@ RSpec.describe Api::V1::Items::FindController do
   describe "GET index" do
     it "can get all items searched for" do
       item = items(:one)
-      get :index, unit_price: item.unit_price
+      get :index, name: item.name
 
       expect(response.status).to eq 200
 
@@ -27,7 +27,7 @@ RSpec.describe Api::V1::Items::FindController do
       expect(parsed_item["id"]).to eq item.id
       expect(parsed_item["name"]).to eq item.name
       expect(parsed_item["description"]).to eq item.description
-      expect(parsed_item["unit_price"]).to eq item.unit_price
+      expect(parsed_item["unit_price"]).to eq (item.unit_price.to_f / 100).to_s
       expect(parsed_item["merchant_id"]).to eq item.merchant_id
     end
   end

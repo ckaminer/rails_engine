@@ -4,8 +4,8 @@ one:
   unit_price: 5
   merchant: one
 
-same_price:
-  name: Nerds
+same_name:
+  name: M&Ms
   description: Balls of sugar
   unit_price: 5
   merchant: one
