@@ -33,5 +33,10 @@ git clone https://github.com/turingschool/rales_engine_spec_harness
 ```
 then
 
+```
+cd rales_engine_spec_harness
+```
+finally, run `rake`
+
 ## Briefing
 Rails Engine is a project at Turing School designed to test the deployment of an API only rails application.  Additionally, business logic is accomplished using advanced ActiveRecord queries. The original project spec can be found [here](https://github.com/turingschool/lesson_plans/blob/master/ruby_03-professional_rails_applications/rails_engine.md#technical-expectations).
