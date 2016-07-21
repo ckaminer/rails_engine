@@ -10,10 +10,15 @@ same_invoice:
 
 two:
   credit_card_number: 4242424242424241
-  result: pending
+  result: test
   invoice: two
 
 three:
   credit_card_number: 4242424242424241
   result: success
   invoice: four
+
+four:
+  credit_card_number: 4242424242424241
+  result: failed
+  invoice: five

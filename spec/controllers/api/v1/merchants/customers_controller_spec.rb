@@ -7,7 +7,7 @@ RSpec.describe Api::V1::Merchants::CustomersController do
   fixtures :invoices
   describe "GET index" do
     it "can return a collection of customers with pending invoices" do
-      merchant = merchants(:one)
+      merchant = merchants(:three)
       get :index, id: merchant.id
 
       expect(response.status).to eq 200

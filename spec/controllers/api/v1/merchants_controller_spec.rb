@@ -9,7 +9,7 @@ RSpec.describe Api::V1::MerchantsController do
       expect(response.status).to eq 200
 
       merchants = JSON.parse(response.body)
-      expect(merchants.count).to eq 2
+      expect(merchants.count).to eq 3
     end
   end
 
