@@ -1,11 +1,12 @@
 # Rails Engine
+This project was completed by [Deb Hamel](https://github.com/deborahleehamel) and [Charlie Kaminer](https://github.com/ckaminer).
 
 ## Setup
 Clone down the repo
 ```
 git clone https://github.com/ckaminer/rails_engine.git
 ```
-Run the following commands from your command line to set up and seed your data:
+Run `bundle` and then run the following commands from your command line to set up and seed your data:
 ```
 rake db:create db:migrate csv:import_all
 ```
