@@ -4,9 +4,9 @@ one:
   invoice: one
   item: two
 
-same_price_as_one:
-  quantity: 6
-  unit_price: 9
+same_quantity_as_one:
+  quantity: 3
+  unit_price: 10
   invoice: one
   item: one
 

@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 37a17723cfababb4f9194750fe833da4c877e7a8
+  specs:
+    active_model_serializers (0.10.2)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      jsonapi (~> 0.1.1.beta2)
+      railties (>= 4.1, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,7 +77,9 @@ GEM
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
-    json (2.0.1)
+    json (1.8.3)
+    jsonapi (0.1.1.beta2)
+      json (~> 1.8)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.0.8)
@@ -173,6 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   byebug
   capybara
   database_cleaner

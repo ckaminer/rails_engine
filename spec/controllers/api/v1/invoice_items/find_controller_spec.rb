@@ -5,7 +5,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController do
   describe "GET index" do
     it "can get all invoice items searched for" do
       invoice_item = invoice_items(:one)
-      get :index, unit_price: invoice_item.unit_price
+      get :index, quantity: invoice_item.quantity
 
       expect(response.status).to eq 200
 
@@ -26,7 +26,7 @@ RSpec.describe Api::V1::InvoiceItems::FindController do
 
       expect(parsed_invoice_item["id"]).to eq invoice_item.id
       expect(parsed_invoice_item["quantity"]).to eq invoice_item.quantity
-      expect(parsed_invoice_item["unit_price"]).to eq invoice_item.unit_price
+      expect(parsed_invoice_item["unit_price"]).to eq (invoice_item.unit_price.to_f / 100).to_s
       expect(parsed_invoice_item["invoice_id"]).to eq invoice_item.invoice_id
       expect(parsed_invoice_item["item_id"]).to eq invoice_item.item_id
     end

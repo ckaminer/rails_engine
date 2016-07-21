@@ -23,7 +23,7 @@ RSpec.describe Api::V1::InvoiceItemsController do
       parsed_invoice_item = JSON.parse(response.body)
       expect(parsed_invoice_item["id"]).to eq invoice_item.id
       expect(parsed_invoice_item["quantity"]).to eq invoice_item.quantity
-      expect(parsed_invoice_item["unit_price"]).to eq invoice_item.unit_price
+      expect(parsed_invoice_item["unit_price"]).to eq (invoice_item.unit_price.to_f / 100).to_s
       expect(parsed_invoice_item["invoice_id"]).to eq invoice_item.invoice_id
       expect(parsed_invoice_item["item_id"]).to eq invoice_item.item_id
     end

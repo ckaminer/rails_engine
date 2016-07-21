@@ -13,7 +13,7 @@ RSpec.describe Api::V1::Items::BusinessController do
       expect(response.status).to eq 200
 
       parsed_date = JSON.parse(response.body)
-      formatted_date = Date.parse(parsed_date).to_s
+      formatted_date = Date.parse(parsed_date["best_day"]).to_s
 
       expect(formatted_date).to eq invoice.created_at.strftime("%Y-%m-%e")
     end
