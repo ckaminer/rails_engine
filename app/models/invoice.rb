@@ -5,7 +5,7 @@ class Invoice < ApplicationRecord
   has_many   :invoice_items
   has_many   :items, through: :invoice_items
 
-  scope :pending, -> { joins(:transactions).having("COUNT(NULLIF( transactions.result = 'success', FALSE)) = 0").group(:id) }
+  scope :pending, -> { joins(:transactions).where(transactions: { result: 'failed' }) }
 
   def self.random_id
     pluck(:id).shuffle.pop
